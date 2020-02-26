@@ -111,17 +111,16 @@ form{
 /* Input Text */
 form .form-text{
   border: none;
-  padding: 1rem 0;
-  text-indent: 1.4rem;
   outline: none;
+  padding: 1rem 0;
   color: #ffffff;
   font-size: 1.4rem;
+  text-indent: 1.4rem;
   background: #dddddd8a;
   transition: all 0.4s ease;
   border-top: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
-  background: #dddddd4a;
 }
 
 form .form-text::placeholder{
@@ -163,7 +162,6 @@ form button:hover{
 /* ====== Menu ====== */
 .menu {
   width: 600px;
-  box-sizing: border-box;
 }
 
 ul {
@@ -213,10 +211,10 @@ li:hover i.fa-trash{
   left: 3%;
   outline: 0;
   border: none;
-  width: 240px;
   color: #fff;
   font-size: 1rem;
   padding: 0.6rem;
+  width: fit-content;
   position: absolute;
   background: #3663a6;
   box-shadow: 0 0 4px #444444;
@@ -256,7 +254,7 @@ i.fa-trash:hover {
   background: #444;
 }
 
-/* Responsive */
+/* ====== Responsive ====== */
 @media (max-width: 640px) {
   .page{
     width: 100%;
@@ -265,7 +263,7 @@ i.fa-trash:hover {
     width: 100%;
   }
   header span{
-    font-size: 2.2rem;
+    font-size: 2rem;
     text-align: center;
   }
   .menu{
@@ -274,25 +272,32 @@ i.fa-trash:hover {
   form{
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
     margin-bottom: 0;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  form button{
+    border: none;
   }
   form .form-text{
-    text-indent: 0rem;
-    text-align: center;
-    font-size: 1.4rem;
+    border: none;
     padding: 2rem 0;
+    text-indent: 0rem;
+    font-size: 1.4rem;
+    text-align: center;
   }
 }
 
 @media (max-width: 420px){  
   header span h3{
-    font-size: 1.6rem;
+    font-size: 1rem;
   }
   header span h4{
     font-size: 1rem;
   }
   form .form-text{
     font-size: 1rem;
+  }
+  form .form-text::placeholder{
+    font-size: 14px;
   }
 }
